@@ -1,12 +1,8 @@
 # reactvyuka
-# https://gitlab.com/kurzy/reaktivni-react
-
 
 ## Instalace
 
  ```shell
- git clone git@gitlab.com:kurzy/reaktivni-react.git
- cd reaktivni-react
  npm install
  ```
 
@@ -20,3 +16,6 @@
 - `npm run stylelint` - kontrola css souborù
 - `npm run lint` - kontrola js a css souborù podle produkèní konfigurace
 
+
+## Další zdroje
+# https://gitlab.com/kurzy/reaktivni-react
