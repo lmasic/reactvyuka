@@ -1,0 +1,229 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+caption {
+  color: white;
+  line-height: 2;
+}
+
+table thead tr {
+  background-color: #2196f3a3;
+  color: #222;
+  text-align: left;
+  font-weight: bold;
+}
+
+table th, table td {
+  padding: 12px 15px;
+  border: 1px solid black;
+  text-align: center;
+  white-space: nowrap;
+}
+
+table td:nth-child(4) {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+table tbody tr {
+
+  /* stylelint-disable-next-line declaration-empty-line-before */
+  border-bottom: 1px solid #ddd;
+}
+
+table.firmlist caption {
+  text-align: right;
+  padding-bottom: 5px;
+}
+
+table.firmlist{
+  margin-top: 40px;
+ }
+
+table.firmlist th {
+  cursor: grab;
+ }
+
+
+table.firmlist th, table.firmlist td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+}
+
+table tbody tr:nth-of-type(even) td {
+  background-color: #f3f3f3;
+}
+
+table.firmlist td:nth-child(2) {
+  max-width:200px;
+  word-wrap: break-word;
+  text-wrap: wrap;
+  cursor: pointer;
+  position: sticky;
+  left:0;
+ }
+ 
+ table.firmlist tr:hover td {
+  background-color:#2196f3 !important;
+}
+
+table.firmlist tbody tr:nth-of-type(odd) td {
+  background-color: #DDD;
+}
+
+table.firmlist  tbody tr td:nth-child(1), table.firmlist  th:nth-child(1) {
+  display:none;
+
+}
+
+ table.firmlist tr:nth-of-type(odd) td:nth-child(2) {
+  background-image: linear-gradient(to right, #DDD 99%, #2196f3);
+ }
+
+ table.firmlist tr:nth-of-type(even) td:nth-child(2) {
+  background-image: linear-gradient(to right, #f3f3f3 99%, #2196f3);
+ }
+
+table.firmlist tr:hover td:nth-child(2) {
+  font-weight: bold;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #2196f354;
+}
+
+table tbody tr.active-row {
+  font-weight: bold;
+  color: #2196f354;
+}
+
+table.firmlist thead {
+  position: sticky;
+    top: 118px;
+    background-color: #f2f2f2;
+    z-index: 999;
+    padding: 10px; /* Optional: add some padding */
+
+  }
+
+  input.search {
+    display:block;
+    margin: 0;
+    width: 180px;
+    height: 30px;
+    padding: 0.1em;
+    margin-left: 11px;
+    border-radius: 0;
+    position: sticky;
+    left: 11px;
+  }
+
+/* kontakt list */
+.floating-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  padding:20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0 0 0 / 80%); 
+  justify-content: center;
+  align-items: center;
+  z-index: 1002;
+}
+
+.close-button {
+  float: right;
+  margin:20px;
+  line-height: normal;
+  cursor: pointer;
+  background: #E8474C;
+  color: white;
+  width: auto;
+  font-weight: bold;
+  padding: 0.75em 2em;
+  border: 0;
+  font-size:18px;
+  
+}
+
+button {
+  line-height: normal;
+  cursor: pointer;
+  background: #E8474C;
+  color: white;
+  width: auto;
+  font-weight: bold;
+  padding: 0.5em 1.5em;
+  border: 0;
+  font-size:15px;
+  margin-right:5px
+  
+}
+
+.floating-layer table {
+  background-color: white;
+  border-radius: 8px;
+  width:auto;
+  max-width:100%;
+  margin:10px auto;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+
+}
+
+@media screen and (width <= 768px) {
+  .responsive-table thead {
+    display: none;
+  }
+
+  .floating-layer {
+    position: absolute;
+  }
+
+  .responsive-table, .responsive-table tbody, .responsive-table tr, .responsive-table td {
+    display: block;
+    width: 98%;
+    margin: 0 1%;
+  }
+
+  .responsive-table tr {
+    margin-bottom: 15px;
+  }
+
+
+  .responsive-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  table.firmlist {
+    width: 100vw;
+
+
+  }
+
+  table.firmlist thead{
+    position: static;
+  }
+}
